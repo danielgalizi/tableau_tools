@@ -26,13 +26,13 @@ with open('permissions_audit.txt', 'wb') as output_file:
 
     project_caps = default.available_capabilities[default.api_version][u'project']
     for cap in project_caps:
-        headers.append(u',{}'.format(cap))
+        headers.append(u'{}'.format(cap))
     workbook_caps = default.available_capabilities[default.api_version][u'workbook']
     for cap in workbook_caps:
-        headers.append(u',{}'.format(cap))
+        headers.append(u'{}'.format(cap))
     datasource_caps = default.available_capabilities[default.api_version][u'datasource']
     for cap in datasource_caps:
-        headers.append(u',{}'.format(cap))
+        headers.append(u'{}'.format(cap))
     output_writer.writerow(headers)
 
     for site_content_url in site_content_urls:
